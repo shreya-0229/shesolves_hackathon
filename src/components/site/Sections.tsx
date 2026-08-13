@@ -24,7 +24,7 @@ import aboutVisual from "@/assets/about-visual.jpg";
 import { BENEFITS, EVENT, FAQS, ROUNDS, SCHEDULE, TRACKS } from "@/config/event";
 import { Reveal } from "./Reveal";
 
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Record<string, LucideIcon | undefined> = {
   HeartPulse,
   GraduationCap,
   Leaf,
@@ -189,7 +189,7 @@ export function Tracks() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {TRACKS.map((t, i) => {
-          const Icon = ICONS[t.icon];
+          const Icon = ICONS[t.icon] ?? Sparkles;
           return (
             <Reveal key={t.title} delay={i * 70}>
               <article className="glass group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:glow-ring">
@@ -225,7 +225,7 @@ export function WhyParticipate() {
 
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {BENEFITS.map((b, i) => {
-          const Icon = ICONS[b.icon];
+          const Icon = ICONS[b.icon] ?? Sparkles;
           return (
             <Reveal key={b.title} delay={i * 60}>
               <article className="group h-full rounded-2xl border border-border bg-surface/50 p-6 transition-all duration-300 hover:border-primary/50 hover:bg-surface">
