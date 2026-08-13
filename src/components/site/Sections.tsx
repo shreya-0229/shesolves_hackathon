@@ -82,7 +82,7 @@ export function About() {
 
         <Reveal delay={160}>
           <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[2rem] opacity-70 blur-3xl" style={{ background: "var(--gradient-hero)" }} />
+            <div className="absolute inset-2 -z-10 rounded-[2rem] opacity-70 blur-3xl" style={{ background: "var(--gradient-hero)" }} />
             <img
               src={aboutVisual}
               alt="Abstract illustration of a woman's profile formed from glowing circuit lines"
