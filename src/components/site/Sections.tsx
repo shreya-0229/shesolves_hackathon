@@ -345,12 +345,23 @@ export function Register() {
           <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
             Your idea could be the next solution that makes an impact.
           </p>
-          <a
-            href={EVENT.registrationUrl}
-            className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-9 py-4 font-display text-base font-bold uppercase tracking-[0.14em] text-primary-foreground transition-all hover:glow-ring hover:brightness-110"
-          >
-            Register Now <ArrowRight className="size-4" aria-hidden="true" />
-          </a>
+          {EVENT.registrationOpen ? (
+            <a
+              href={EVENT.registrationUrl}
+              className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-9 py-4 font-display text-base font-bold uppercase tracking-[0.14em] text-primary-foreground transition-all hover:glow-ring hover:brightness-110"
+            >
+              Register Now <ArrowRight className="size-4" aria-hidden="true" />
+            </a>
+          ) : (
+            <div className="mt-9 inline-flex flex-col items-center justify-center gap-3">
+              <span className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-surface/80 px-9 py-4 font-display text-base font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                Registration Opening Soon
+              </span>
+              <p className="text-xs text-muted-foreground">
+                Check back here or follow our socials for updates.
+              </p>
+            </div>
+          )}
           <p className="mt-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             Team Size: {EVENT.teamSize}
           </p>
