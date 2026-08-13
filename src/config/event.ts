@@ -20,6 +20,7 @@ export const EVENT = {
   prizePool: "₹15,000",
 
   // ── Registration ─────────────────────────────────────────────
+  registrationOpen: false,
   registrationUrl: "#register",
 
   // ── Contact & socials ────────────────────────────────────────
